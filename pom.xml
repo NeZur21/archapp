@@ -34,7 +34,6 @@
                 <version>${app.version}</version>
             </dependency>
             <!-- конец общих модулей -->
-
             <!-- MapStruct для маппинга Entity -> DTO -->
             <dependency>
                 <groupId>org.mapstruct</groupId>
