@@ -1,4 +1,4 @@
-package com.misis.archapp.user;
+    package com.misis.archapp.user;
 
 import com.misis.archapp.contract.configuration.RabbitConfiguration;
 import org.springframework.boot.SpringApplication;

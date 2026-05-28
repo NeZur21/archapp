@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.misis</groupId>
@@ -17,44 +16,50 @@
     <modules>
         <module>user-service</module>
         <module>notification-service</module>
+        <module>balance-service</module>
         <module>shared-contract</module>
     </modules>
 
     <properties>
         <java.version>17</java.version>
-        <app.version>${project.version}</app.version>
+        <mapstruct.version>1.5.5.Final</mapstruct.version>
+        <axon.version>4.9.1</axon.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
-            <!-- общие модули -->
+
             <dependency>
                 <groupId>com.misis</groupId>
                 <artifactId>shared-contract</artifactId>
-                <version>${app.version}</version>
+                <version>${project.version}</version>
             </dependency>
-            <!-- конец общих модулей -->
-            <!-- MapStruct для маппинга Entity -> DTO -->
+
             <dependency>
                 <groupId>org.mapstruct</groupId>
                 <artifactId>mapstruct</artifactId>
-                <version>1.5.5.Final</version>
+                <version>${mapstruct.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>org.mapstruct</groupId>
                 <artifactId>mapstruct-processor</artifactId>
-                <version>1.5.5.Final</version>
+                <version>${mapstruct.version}</version>
             </dependency>
 
-            <!-- OpenAPI -->
             <dependency>
-                <groupId>org.springdoc</groupId>
-                <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
-                <version>2.3.0</version>
+                <groupId>org.axonframework</groupId>
+                <artifactId>axon-spring-boot-starter</artifactId>
+                <version>${axon.version}</version>
             </dependency>
+
+             <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+            <version>2.3.0</version>
+        </dependency>
+
         </dependencies>
     </dependencyManagement>
-
 
 </project>
